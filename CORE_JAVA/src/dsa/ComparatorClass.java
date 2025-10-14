@@ -1,0 +1,71 @@
+package dsa;
+//The ComparatorClass is a placeholder for the comparator example.
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+
+// The actual implementation of the comparator logic is in the commented-out code above.
+// You can uncomment and run the comparator example to see how it works with Admin_class objects.
+
+class Admin_class {
+	int id;
+	String name;
+
+	public Admin_class(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+}
+class idchoice implements Comparator{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+Admin_class a1 =(Admin_class) o1;
+Admin_class  a2 =(Admin_class) o2;
+
+/*if(a1.id == a2.id) {
+  return 0;}
+  else if (a1.id >a2.id) {
+  return 1;}
+  else {
+   return -1;
+  }*/
+ 
+
+		return Integer.compare(a1.id,a2.id);
+	}
+	
+}
+class namechoice implements Comparator{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		Admin_class a1 = (Admin_class) o1;
+		Admin_class a2 = (Admin_class) o2;
+		
+		return a1.name.compareToIgnoreCase(a2.name); //ignore case for not confusion between C and c
+	}
+	
+}
+public class ComparatorClass {
+	public static void main(String[] args) {
+ArrayList<Admin_class> al = new ArrayList<Admin_class>();
+al.add(new Admin_class(324, "\tZack"));
+al.add(new Admin_class(34, "\tBack"));
+al.add(new Admin_class(24, "\tNaack"));
+al.add(new Admin_class(404, "\tAck"));
+al.add(new Admin_class(44444, "\tCk"));
+al.add(new Admin_class(14, "\tMac"));
+al.add(new Admin_class(44, "\tcheck"));
+
+Collections.sort(al, new namechoice());
+Iterator<Admin_class> it = al.iterator();
+while(it.hasNext()) {
+	Admin_class a = it.next();
+	System.out.println(a.id + " " + a.name);
+}
+	}
+}
