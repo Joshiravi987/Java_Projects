@@ -1,0 +1,9 @@
+# IDE Files to Ignore
+.settings/
+.classpath
+.project
+
+# Compiled Folders for all projects
+*/bin/ 
+*/target/
+/.metadata/
