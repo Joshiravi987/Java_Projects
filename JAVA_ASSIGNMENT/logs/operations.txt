@@ -1,0 +1,10 @@
+2025-09-12T23:10:22.136267100 - Application started
+2025-09-12T23:10:41.678472500 - Deleted student id: 1
+2025-09-12T23:10:53.358490600 - Deleted student id: 2
+2025-09-12T23:11:10.334326700 - Enrolled student 3 to course 2
+2025-09-13T11:19:20.590321300 - Application started
+2025-09-13T11:19:30.314922700 - Application exited
+2025-09-13T11:20:21.366315500 - Application started
+2025-09-13T11:21:28.306122300 - Added student: Student{id=4, name='Darshak', email='Darshakgoswami176@gmail.com', phone='9934322344'}
+2025-09-13T11:24:59.004265 - Enrolled student 4 to course 1
+2025-09-13T11:29:31.963662100 - Application started
