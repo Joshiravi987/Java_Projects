@@ -1,9 +1,13 @@
-# IDE Files to Ignore
-.settings/
-.classpath
-.project
+# Compiled class files
+*.class
 
-# Compiled Folders for all projects
-*/bin/ 
-*/target/
-/.metadata/
+# Build folders
+bin/
+target/
+
+# IDE metadata files
+.metadata/
+.settings/
+
+# Server logs and configs
+Servers/
