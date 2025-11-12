@@ -40,5 +40,11 @@ public Person getPerson() {
 public void setPerson(Person person) {
 	this.person = person;
 }
+public void showPersonDetails() {
+	System.out.println("Person Details:");
+	System.out.println("ID: "+ person.getPerson_id());
+	System.out.println("Name: "+ person.getPerson_name());
+	System.out.println("Mobile: "+ person.getPerson_mobile());
+}
 
 }

@@ -3,4 +3,17 @@
   <groupId>com.test</groupId>
   <artifactId>Practice_Hibernate</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>4.3.6.Final</version>
+</dependency>
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>8.0.31</version>
+</dependency>
+  </dependencies>
 </project>
