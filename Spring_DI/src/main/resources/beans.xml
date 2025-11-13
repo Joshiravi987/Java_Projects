@@ -18,4 +18,15 @@
        <property name="person"  ref="person"></property>
        </bean>
        
+       <bean id="Employee" class="com.employee.Employee">
+       <constructor-arg index ="0" value="101"></constructor-arg>
+       <constructor-arg index ="1" value="IT"></constructor-arg>
+       </bean>
+       
+       <bean id="Department" class="com.department.Department">
+       <constructor-arg index ="0" value="10"></constructor-arg>
+       <constructor-arg index ="1" value="IT"></constructor-arg>
+       <constructor-arg index ="2" ref="Employee"></constructor-arg>
+       </bean>
+       
        </beans>
