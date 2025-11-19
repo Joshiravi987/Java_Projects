@@ -29,4 +29,24 @@
        <constructor-arg index ="2" ref="Employee"></constructor-arg>
        </bean>
        
+       <bean id="student" class="com.student.Student">
+       <property name="stuid" value="1"></property>
+       <property name="stuName" value="Ravi"></property>       
+       </bean>
+       
+        <bean id="course" class="com.courses.Courses">
+       <property name="courseId" value="1"></property>
+       <property name="courseName" value="java"></property>       
+       </bean>
+       
+       <bean id="added" class="com.added.Class_Result">
+       <property name="list">
+       <list>
+       <ref bean="student"></ref>
+       <ref bean="course"></ref>
+      
+       </list>
+       </property>
+       </bean>
+       
        </beans>

@@ -10,6 +10,7 @@ public static void main(String[] args) {
 	m.setName("Darshak");
 	m.setPassword("dar@123");
 	
+	
 	DataDao d = new DataDao();
 	d.InsertData(m);
 	System.out.println("Data inserted successfully.");

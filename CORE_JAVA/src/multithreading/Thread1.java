@@ -15,6 +15,8 @@ package multithreading;
 // The waiting state is when a thread is waiting for another thread to perform a particular action.
 // The timed waiting state is when a thread is waiting for another thread to perform a particular action for a specified period of time.
 // The terminated state is when a thread has completed its execution or has been stopped.
+//what is Synchronization?
+
 // Synchronization is the process of controlling access to shared resources by multiple threads.
 // Synchronization is used to prevent
 // data inconsistency and ensure that only one thread can access a shared resource at a time.
@@ -56,6 +58,9 @@ package multithreading;
 
 // dead() => When a thread has completed its execution or has been stopped, it is in the terminated state.. or 
 //Every thread has a life cycle,A running threadends its life when it has completed execution its run() method.
+
+//deadlock => A deadlock is a situation in which two or more threads are blocked forever, waiting for each other to release resources.
+//prevent deadlock => To prevent deadlock, we can use techniques such as resource ordering, timeout, and avoiding nested locks.
 
 //Thread can be created in two ways:
 // 1. By extending the Thread class // => By extending the Thread class, we can create a new thread by overriding the run() method. // java.lang.Thread
