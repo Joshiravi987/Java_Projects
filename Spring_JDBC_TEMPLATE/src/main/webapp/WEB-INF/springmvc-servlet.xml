@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation=" http://www.springframework.org/schema/beans  
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+<bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" ref="com.mysql.cj.jdbc.Driver"></property>
+    <property name="url" value="jdbc:mysql://localhost:3306/test"></property>
+    <property name="username" value="root"></property>
+    <property name="password" value=""></property>
+</bean>	
+
+<!-- JdbcTemplate is used to execute   -->
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+    <property name="dataSource" ref="datasource"></property>
+    </bean>
+
+
+<context:component-scan base-package="com.spring.jdbctemplate"></context:component-scan>
+
+<context:annotation-config></context:annotation-config>
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/View/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+
+<bean id="userService" class="com.spring.jdbctemplate.UserServiceImpl" ></bean>
+<bean id="userDao" class="com.spring.jdbctemplate.UserDaoImpl" ></bean>
+
+
+</beans>
+
