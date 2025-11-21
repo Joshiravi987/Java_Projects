@@ -16,7 +16,7 @@ public class UserDaoImpl implements UserDao {
 	public void register(User user) {
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
-		String sql="insert into Students values(?,?)";
+		String sql="insert into Students(username,password) values(?,?)";
 		jdbcTemplate.update(sql,new Object[] {user.getUsername(),user.getPassword()});
 	
 	}

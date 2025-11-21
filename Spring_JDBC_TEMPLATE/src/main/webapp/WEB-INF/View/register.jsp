@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Register Page</title>
 </head>
 <body>
-<h2>Register User</h2>
+<form action ="register" method="post">
+ Username: <input type="text" name="username"/><br/>
+ Password: <input type="password" name="password"/><br/>
+ <input type="submit" value="Register"/>
+ ${message} 	
+ </form>
+ 
 </body>
 </html>

@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Student Registration</title>
 
 </head>
 <body>
+<a href="register">Register</a>
 <h2>Welcome to Spring JDBC Template Example</h2>
 </body>
 </html>

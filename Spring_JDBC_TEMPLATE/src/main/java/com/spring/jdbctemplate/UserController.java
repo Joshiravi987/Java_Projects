@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class UserController {
@@ -24,9 +25,11 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/register",method = RequestMethod.POST)
-	public String registerUser(@ModelAttribute User user) {
+	public String registerUser(@ModelAttribute User user,HttpSession session) {
 		userService.register(user);
-		return "success";
+		//add data inserted message
+		session.setAttribute("message", "User registered successfully");
+		return "register";
 	}
 	
 	
