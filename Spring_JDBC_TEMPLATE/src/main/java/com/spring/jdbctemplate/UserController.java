@@ -32,5 +32,12 @@ public class UserController {
 		return "register";
 	}
 	
+	@RequestMapping(value = "/showdata", method = RequestMethod.GET)//show all users
+	public ModelAndView showUsers(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView("showUsers");//method name to be called
+		mav.addObject("users", userService.getAllUsers());
+		return mav;
+	}
+	
 	
 }

@@ -22,15 +22,12 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 <context:component-scan base-package="com.spring.jdbctemplate"></context:component-scan>
 
-<context:annotation-config></context:annotation-config>
+
 
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <property name="prefix" value="/WEB-INF/View/"></property>
 <property name="suffix" value=".jsp"></property>
 </bean>
-
-<bean id="userService" class="com.spring.jdbctemplate.UserServiceImpl" ></bean>
-<bean id="userDao" class="com.spring.jdbctemplate.UserDaoImpl" ></bean>
 
 
 </beans>
