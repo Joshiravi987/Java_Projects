@@ -39,5 +39,30 @@ public class UserController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/deleteUser", method = RequestMethod.GET)//delete user by id
+	public String deleteUser(HttpServletRequest request, HttpServletResponse response,HttpSession session) {
+		int id = Integer.parseInt(request.getParameter("id"));
+		userService.delete(id);
+		//add data deleted message
+		session.setAttribute("message", "User deleted successfully");
+		return "redirect:/showdata";
+	}
+	
+	@RequestMapping(value = "/editUser", method = RequestMethod.GET)//edit user by id
+	public ModelAndView editUser(HttpServletRequest request, HttpServletResponse response) {
+		int id = Integer.parseInt(request.getParameter("id"));
+		User user = userService.getUserById(id);
+		ModelAndView mav = new ModelAndView("editUser");
+		mav.addObject("user", user);
+		return mav;
+	}
+	
+	@RequestMapping(value = "/updateUser", method = RequestMethod.POST)//update user by id
+	public String updateUser(@ModelAttribute User user,HttpSession session) {
+		userService.update(user);
+		//add data updated message
+		session.setAttribute("message", "User updated successfully");
+		return "redirect:/showdata";
+	}
 	
 }

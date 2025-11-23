@@ -7,6 +7,10 @@ public interface UserDao {
 	void register(User user);
 	//show all users
 	List<User> getAllUsers();
-	
+	//delete method
+	void delete(int id);
+	//edit method
+	User getUserById(int id);
+	void update(User user);
 
 }
