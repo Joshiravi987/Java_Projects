@@ -1,5 +1,7 @@
-package inheritance;
+package oops.inheritance;
+
 //single level inheritance
+
 class parent {
 	parent() {
 		System.out.println("parent class");
@@ -12,7 +14,7 @@ class child extends parent {
 	}
 }
 
-public class default_construcor {
+public class DefaultConstructor {
 	public static void main(String[] args) {
 	 new child();
 	}

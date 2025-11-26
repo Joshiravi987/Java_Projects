@@ -11,7 +11,7 @@
 
     <h2>Registered Users</h2>
     
-    <h3 style="color: green">${message}</h3> <!--  this for message -->
+ 
     
     <table border="1">
         <tr>
@@ -26,12 +26,12 @@
                 <td><c:out value="${user.id}"/></td>
                 <td><c:out value="${user.username}"/></td>
                 <td><c:out value="${user.password}"/></td>
-                <td><a href="editUser?id=${user.id}">Edit</a></td>
+                <td><a href="edit?id=${user.id}">Edit</a></td>
                 <td><a href="deleteUser?id=${user.id}">Delete</a></td>
             </tr>
         </c:forEach>
     </table>
-    
+       <h3 style="color: green">${message}</h3> <!--  this for message -->
     <c:remove var="message" scope="session" /> <!-- this for message -->
 
 </body>

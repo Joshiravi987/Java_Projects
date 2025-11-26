@@ -8,20 +8,19 @@
 <body>
     <h2>Edit User</h2>
     
-    <form action="updateUser" method="post">
+    <form action="update" method="post">
     
-        <input type="hidden" name="id" value="${user.id}"/>
+        <input type="hidden" name="id" value="${editdata.id}"/>
         
         <label>Username:</label>
-        <input type="text" name="username" value="${user.username}"/><br/><br/>
+        <input type="text" name="username" value="${editdata.username}"/><br/><br/>
         
         <label>Password:</label>
-        <input type="text" name="password" value="${user.password}"/><br/><br/>
+        <input type="text" name="password" value="${editdata.password}"/><br/><br/>
         
         <input type="submit" value="Update User"/>
-    </form>
+    ${message}
     
-    <br/>
-    <a href="showdata">Cancel</a>
+    </form>
 </body>
 </html>

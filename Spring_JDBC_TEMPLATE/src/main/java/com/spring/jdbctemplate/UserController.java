@@ -3,8 +3,10 @@ package com.spring.jdbctemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -48,21 +50,17 @@ public class UserController {
 		return "redirect:/showdata";
 	}
 	
-	@RequestMapping(value = "/editUser", method = RequestMethod.GET)//edit user by id
-	public ModelAndView editUser(HttpServletRequest request, HttpServletResponse response) {
-		int id = Integer.parseInt(request.getParameter("id"));
-		User user = userService.getUserById(id);
-		ModelAndView mav = new ModelAndView("editUser");
-		mav.addObject("user", user);
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)//edit user by id
+	public ModelAndView editUser(@RequestParam("id") int id) {
+	ModelAndView mav = new ModelAndView("editUser");
+		mav.addObject("editdata", userService.getUserById(id));
 		return mav;
 	}
-	
-	@RequestMapping(value = "/updateUser", method = RequestMethod.POST)//update user by id
+	@RequestMapping(value = "/update",method = RequestMethod.POST)//update user by id
 	public String updateUser(@ModelAttribute User user,HttpSession session) {
 		userService.update(user);
 		//add data updated message
 		session.setAttribute("message", "User updated successfully");
 		return "redirect:/showdata";
 	}
-	
 }

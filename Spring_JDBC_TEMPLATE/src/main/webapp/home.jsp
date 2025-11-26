@@ -10,6 +10,6 @@
 <body>
 <a href="register">Register</a>
 <a href = "showdata" >Show data</a>
-<h2>Welcome to Spring JDBC Template Example</h2>
+
 </body>
 </html>

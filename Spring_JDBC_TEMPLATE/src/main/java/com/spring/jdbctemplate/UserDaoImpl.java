@@ -47,8 +47,8 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public User getUserById(int id) {
-		String sql= "SELECT * FROM Students WHERE id=?";
-		return jdbcTemplate.queryForObject(sql, new Object[] {id}, (rs,rowNum)->{
+		String sql= "SELECT * FROM Students WHERE id=" +id;
+		return jdbcTemplate.queryForObject(sql,  (rs,rowNum)->{
 			User user = new User();
 			user.setId(rs.getInt("id"));
 			user.setUsername(rs.getString("username"));
@@ -60,9 +60,10 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public void update(User user) {
-		String sql="UPDATE Students SET username=?, password=? WHERE id=?";
-		jdbcTemplate.update(sql, new Object[] {user.getUsername(), user.getPassword(), user.getId()});		
+		// TODO Auto-generated method stub
+		String sql="update Students set username=?, password=? where id=?";
+		jdbcTemplate.update(sql,new Object[] {user.getUsername(),user.getPassword(),user.getId()});		
 	}
-		}
+}
 
 
