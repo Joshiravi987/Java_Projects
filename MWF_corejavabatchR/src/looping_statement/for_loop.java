@@ -1,10 +1,8 @@
 package looping_statement;
 
 public class for_loop {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//print 1 to 10 using for loop
+	public static void main(final String[] args) {
+		//print 1 to 10 using for loop
 		for (int i = 1; i <= 10; i++) {
 			System.out.println(i);
 		}
@@ -32,5 +30,6 @@ if(count > 2) {
 else {
 	System.out.println(num_tofind + " is a prime number");
 }
+	
 	}
 }

@@ -54,10 +54,8 @@ class HR extends Manager{
 
 public class task_multilevel_overriding {
 public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 HR hr = new HR();
 hr.display();
 	}
-
 }
