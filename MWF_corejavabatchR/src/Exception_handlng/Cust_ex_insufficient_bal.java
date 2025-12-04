@@ -17,7 +17,7 @@ public class Cust_ex_insufficient_bal {
 	}
 	else
 	{
-		throw new InsufficientBalanceException(" balance");
+		throw new InsufficientBalanceException("Insufficient balance for withdrawal balance");
 	}
 	}
 

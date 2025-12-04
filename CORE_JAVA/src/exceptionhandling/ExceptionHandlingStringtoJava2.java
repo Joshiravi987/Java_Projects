@@ -1,6 +1,7 @@
 package exceptionhandling;
 
 public class ExceptionHandlingStringtoJava2 {
+	
 public static void main(String[] args) {
 	try {
 		String str = "a";
