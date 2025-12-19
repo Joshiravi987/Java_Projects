@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module MWF_corejavabatchR {
-}

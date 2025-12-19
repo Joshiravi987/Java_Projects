@@ -1,6 +1,6 @@
 package OOPS.abstraction;
 
-public class call_abstract_class extends abstract_class {
+public class call_abstract_class extends AbstractClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
